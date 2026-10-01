@@ -19,8 +19,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # The `test` scripts pass `src/**/*.test.ts` through to `node --test`
-        # and rely on Node's own glob expansion, which landed in 22. Node 20 is
+        # Test scripts quote `src/**/*.test.ts` so the shell cannot expand only
+        # nested tests and omit top-level files. Node expands the glob (22+). Node 20 is
         # past EOL, so the floor here is deliberately above package.json engines.
         node: [22, 24]
     name: node ${{ matrix.node }}

@@ -10,7 +10,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "ilink:login": "tsx src/cli-login.ts",
     "diag": "tsx src/cli-doctor.ts",
-    "test": "node --import tsx --test src/**/*.test.ts"
+    "test": "node --import tsx --test \"src/**/*.test.ts\""
   },
   "dependencies": {
     "@fastify/compress": "^8.0.1",
